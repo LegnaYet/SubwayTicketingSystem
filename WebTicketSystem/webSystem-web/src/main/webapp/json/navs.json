@@ -1,0 +1,27 @@
+[
+  {
+    "title": "首页",
+    "href": "page/main",
+    "spread": false
+  },
+  {
+    "title": "用户信息",
+    "href": "page/user/userInfo",
+    "spread": false
+  },
+  {
+    "title": "购票",
+    "href": "page/order/order",
+    "spread": false
+  },
+  {
+    "title": "订单查询",
+    "href": "page/order/orderList",
+    "spread": false
+  },
+  {
+    "title": "充值",
+    "href": "page/user/recharge",
+    "spread": false
+  }
+]

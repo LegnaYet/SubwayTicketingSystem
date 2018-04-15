@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.STS.machine.dao.InternetOrderMapper" >
+  <resultMap id="BaseResultMap" type="com.STS.machine.pojo.po.InternetOrder" >
+    <constructor >
+      <idArg column="oid" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <idArg column="state" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="beginId" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="beginName" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="endId" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="endName" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="ticNum" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="price" jdbcType="DOUBLE" javaType="java.lang.Double" />
+      <arg column="telephone" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="verificationCode" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </constructor>
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    oid, state, beginId, beginName, endId, endName, ticNum, price, telephone, verificationCode
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.STS.machine.pojo.po.InternetOrderExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from internetorder
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.STS.machine.pojo.po.InternetOrderKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from internetorder
+    where oid = #{oid,jdbcType=VARCHAR}
+      and state = #{state,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.STS.machine.pojo.po.InternetOrderKey" >
+    delete from internetorder
+    where oid = #{oid,jdbcType=VARCHAR}
+      and state = #{state,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.STS.machine.pojo.po.InternetOrderExample" >
+    delete from internetorder
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.STS.machine.pojo.po.InternetOrder" >
+    insert into internetorder (oid, state, beginId, 
+      beginName, endId, endName, 
+      ticNum, price, telephone, 
+      verificationCode)
+    values (#{oid,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, #{beginid,jdbcType=INTEGER}, 
+      #{beginname,jdbcType=VARCHAR}, #{endid,jdbcType=INTEGER}, #{endname,jdbcType=VARCHAR}, 
+      #{ticnum,jdbcType=INTEGER}, #{price,jdbcType=DOUBLE}, #{telephone,jdbcType=VARCHAR}, 
+      #{verificationcode,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.STS.machine.pojo.po.InternetOrder" >
+    insert into internetorder
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="oid != null" >
+        oid,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="beginid != null" >
+        beginId,
+      </if>
+      <if test="beginname != null" >
+        beginName,
+      </if>
+      <if test="endid != null" >
+        endId,
+      </if>
+      <if test="endname != null" >
+        endName,
+      </if>
+      <if test="ticnum != null" >
+        ticNum,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="telephone != null" >
+        telephone,
+      </if>
+      <if test="verificationcode != null" >
+        verificationCode,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="oid != null" >
+        #{oid,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="beginid != null" >
+        #{beginid,jdbcType=INTEGER},
+      </if>
+      <if test="beginname != null" >
+        #{beginname,jdbcType=VARCHAR},
+      </if>
+      <if test="endid != null" >
+        #{endid,jdbcType=INTEGER},
+      </if>
+      <if test="endname != null" >
+        #{endname,jdbcType=VARCHAR},
+      </if>
+      <if test="ticnum != null" >
+        #{ticnum,jdbcType=INTEGER},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="telephone != null" >
+        #{telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="verificationcode != null" >
+        #{verificationcode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.STS.machine.pojo.po.InternetOrderExample" resultType="java.lang.Integer" >
+    select count(*) from internetorder
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update internetorder
+    <set >
+      <if test="record.oid != null" >
+        oid = #{record.oid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.state != null" >
+        state = #{record.state,jdbcType=VARCHAR},
+      </if>
+      <if test="record.beginid != null" >
+        beginId = #{record.beginid,jdbcType=INTEGER},
+      </if>
+      <if test="record.beginname != null" >
+        beginName = #{record.beginname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.endid != null" >
+        endId = #{record.endid,jdbcType=INTEGER},
+      </if>
+      <if test="record.endname != null" >
+        endName = #{record.endname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ticnum != null" >
+        ticNum = #{record.ticnum,jdbcType=INTEGER},
+      </if>
+      <if test="record.price != null" >
+        price = #{record.price,jdbcType=DOUBLE},
+      </if>
+      <if test="record.telephone != null" >
+        telephone = #{record.telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.verificationcode != null" >
+        verificationCode = #{record.verificationcode,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update internetorder
+    set oid = #{record.oid,jdbcType=VARCHAR},
+      state = #{record.state,jdbcType=VARCHAR},
+      beginId = #{record.beginid,jdbcType=INTEGER},
+      beginName = #{record.beginname,jdbcType=VARCHAR},
+      endId = #{record.endid,jdbcType=INTEGER},
+      endName = #{record.endname,jdbcType=VARCHAR},
+      ticNum = #{record.ticnum,jdbcType=INTEGER},
+      price = #{record.price,jdbcType=DOUBLE},
+      telephone = #{record.telephone,jdbcType=VARCHAR},
+      verificationCode = #{record.verificationcode,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.STS.machine.pojo.po.InternetOrder" >
+    update internetorder
+    <set >
+      <if test="beginid != null" >
+        beginId = #{beginid,jdbcType=INTEGER},
+      </if>
+      <if test="beginname != null" >
+        beginName = #{beginname,jdbcType=VARCHAR},
+      </if>
+      <if test="endid != null" >
+        endId = #{endid,jdbcType=INTEGER},
+      </if>
+      <if test="endname != null" >
+        endName = #{endname,jdbcType=VARCHAR},
+      </if>
+      <if test="ticnum != null" >
+        ticNum = #{ticnum,jdbcType=INTEGER},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="telephone != null" >
+        telephone = #{telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="verificationcode != null" >
+        verificationCode = #{verificationcode,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where oid = #{oid,jdbcType=VARCHAR}
+      and state = #{state,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.STS.machine.pojo.po.InternetOrder" >
+    update internetorder
+    set beginId = #{beginid,jdbcType=INTEGER},
+      beginName = #{beginname,jdbcType=VARCHAR},
+      endId = #{endid,jdbcType=INTEGER},
+      endName = #{endname,jdbcType=VARCHAR},
+      ticNum = #{ticnum,jdbcType=INTEGER},
+      price = #{price,jdbcType=DOUBLE},
+      telephone = #{telephone,jdbcType=VARCHAR},
+      verificationCode = #{verificationcode,jdbcType=VARCHAR}
+    where oid = #{oid,jdbcType=VARCHAR}
+      and state = #{state,jdbcType=VARCHAR}
+  </update>
+</mapper>

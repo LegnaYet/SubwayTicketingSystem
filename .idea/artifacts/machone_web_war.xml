@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="machone-web:war">
+    <output-path>$PROJECT_DIR$/AutomaticTicketMachine/machone-web/target</output-path>
+    <root id="archive" name="machone-web.war">
+      <element id="artifact" artifact-name="machone-web:war exploded" />
+    </root>
+  </artifact>
+</component>

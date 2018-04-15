@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AutomaticTicketMachine/AutomaticTicketMachine.iml" filepath="$PROJECT_DIR$/AutomaticTicketMachine/AutomaticTicketMachine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebTicketSystem/WebTicketSystem.iml" filepath="$PROJECT_DIR$/WebTicketSystem/WebTicketSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons/commons.iml" filepath="$PROJECT_DIR$/commons/commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AutomaticTicketMachine/machine-dao/machine-dao.iml" filepath="$PROJECT_DIR$/AutomaticTicketMachine/machine-dao/machine-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AutomaticTicketMachine/machine-pojo/machine-pojo.iml" filepath="$PROJECT_DIR$/AutomaticTicketMachine/machine-pojo/machine-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AutomaticTicketMachine/machone-interface/machone-interface.iml" filepath="$PROJECT_DIR$/AutomaticTicketMachine/machone-interface/machone-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AutomaticTicketMachine/machone-service/machone-service.iml" filepath="$PROJECT_DIR$/AutomaticTicketMachine/machone-service/machone-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AutomaticTicketMachine/machone-web/machone-web.iml" filepath="$PROJECT_DIR$/AutomaticTicketMachine/machone-web/machone-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebTicketSystem/webSystem-dao/webSystem-dao.iml" filepath="$PROJECT_DIR$/WebTicketSystem/webSystem-dao/webSystem-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebTicketSystem/webSystem-interface/webSystem-interface.iml" filepath="$PROJECT_DIR$/WebTicketSystem/webSystem-interface/webSystem-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebTicketSystem/webSystem-pojo/webSystem-pojo.iml" filepath="$PROJECT_DIR$/WebTicketSystem/webSystem-pojo/webSystem-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebTicketSystem/webSystem-service/webSystem-service.iml" filepath="$PROJECT_DIR$/WebTicketSystem/webSystem-service/webSystem-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebTicketSystem/webSystem-web/webSystem-web.iml" filepath="$PROJECT_DIR$/WebTicketSystem/webSystem-web/webSystem-web.iml" />
+    </modules>
+  </component>
+</project>

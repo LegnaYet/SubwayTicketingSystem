@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/AutomaticTicketMachine" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AutomaticTicketMachine/machine-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AutomaticTicketMachine/machine-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AutomaticTicketMachine/machone-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AutomaticTicketMachine/machone-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AutomaticTicketMachine/machone-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WebTicketSystem" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WebTicketSystem/webSystem-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WebTicketSystem/webSystem-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WebTicketSystem/webSystem-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WebTicketSystem/webSystem-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WebTicketSystem/webSystem-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WebTicketSystem/webSystem-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/commons" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

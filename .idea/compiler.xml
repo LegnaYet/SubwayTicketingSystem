@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="commons" />
+        <module name="machine-dao" />
+        <module name="machine-pojo" />
+        <module name="machone-interface" />
+        <module name="machone-service" />
+        <module name="machone-web" />
+        <module name="webSystem-dao" />
+        <module name="webSystem-interface" />
+        <module name="webSystem-pojo" />
+        <module name="webSystem-service" />
+        <module name="webSystem-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AutomaticTicketMachine" target="1.8" />
+      <module name="commons" target="1.8" />
+      <module name="machine-dao" target="1.8" />
+      <module name="machine-pojo" target="1.8" />
+      <module name="machone-interface" target="1.8" />
+      <module name="machone-service" target="1.8" />
+      <module name="machone-web" target="1.8" />
+      <module name="parent" target="1.8" />
+      <module name="webSystem-dao" target="1.8" />
+      <module name="webSystem-interface" target="1.8" />
+      <module name="webSystem-pojo" target="1.8" />
+      <module name="webSystem-service" target="1.8" />
+      <module name="webSystem-web" target="1.8" />
+      <module name="webSystemdao" target="1.8" />
+      <module name="WebTicketSystem" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
